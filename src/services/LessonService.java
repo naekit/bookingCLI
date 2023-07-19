@@ -4,6 +4,7 @@ import dao.LessonDao;
 import models.Lesson;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class LessonService {
     private final LessonDao lessonDao;
@@ -22,5 +23,9 @@ public class LessonService {
 
     public List<Lesson> getLessonsBySubject(String subject){
         return lessonDao.getLessonsBySubject(subject);
+    }
+
+    public List<String> getAllSubjects(){
+        return lessonDao.getAllLessons().stream().map(Lesson::getSubject).distinct().collect(Collectors.toList());
     }
 }

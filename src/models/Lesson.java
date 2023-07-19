@@ -3,22 +3,22 @@ package models;
 import java.util.Objects;
 
 public class Lesson {
-    private String title;
+    private String name;
     private String subject;
     private Mentor mentor;
 
-    public Lesson(String title, String subject, Mentor mentor) {
-        this.title = title;
+    public Lesson(String name, String subject, Mentor mentor) {
+        this.name = name;
         this.subject = subject;
         this.mentor = mentor;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getSubject() {
@@ -42,18 +42,18 @@ public class Lesson {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Lesson lesson = (Lesson) o;
-        return Objects.equals(title, lesson.title) && Objects.equals(subject, lesson.subject) && Objects.equals(mentor, lesson.mentor);
+        return Objects.equals(name, lesson.name) && Objects.equals(subject, lesson.subject) && Objects.equals(mentor, lesson.mentor);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(title, subject, mentor);
+        return Objects.hash(name, subject, mentor);
     }
 
     @Override
     public String toString() {
         return "Lesson{" +
-                "title='" + title + '\'' +
+                "title='" + name + '\'' +
                 ", subject='" + subject + '\'' +
                 ", mentor=" + mentor +
                 '}';
