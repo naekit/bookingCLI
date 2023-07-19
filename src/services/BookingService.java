@@ -1,2 +1,4 @@
-package services;public class BookingService {
+package services;
+
+public class BookingService {
 }
