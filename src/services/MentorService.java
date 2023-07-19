@@ -19,4 +19,8 @@ public class MentorService {
     public List<Mentor> getAllMentors(){
         return mentorDao.getAllMentors();
     }
+
+    public Mentor getMentorByName(String mentorName) {
+        return mentorDao.getMentorByName(mentorName);
+    }
 }

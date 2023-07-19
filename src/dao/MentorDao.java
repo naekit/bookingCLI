@@ -10,6 +10,10 @@ public class MentorDao {
 
     public MentorDao(){
         this.mentors = new ArrayList<>();
+//        initial mentors
+        this.mentors.add(new Mentor("Nikita"));
+        this.mentors.add(new Mentor("Derek"));
+        this.mentors.add(new Mentor("Archie"));
     }
 
     public void addMentor(Mentor mentor){
@@ -18,5 +22,14 @@ public class MentorDao {
 
     public List<Mentor> getAllMentors(){
         return mentors;
+    }
+
+    public Mentor getMentorByName(String mentorName){
+        for (Mentor mentor: mentors){
+            if(mentor.getName().equalsIgnoreCase(mentorName)){
+                return mentor;
+            }
+        }
+        return null;
     }
 }

@@ -12,6 +12,9 @@ public class LessonService {
     public LessonService() {
         this.lessonDao = new LessonDao();
     }
+    public LessonService(MentorService mentorService) {
+        this.lessonDao = new LessonDao(mentorService);
+    }
 
     public void addLesson(Lesson lesson){
         lessonDao.addLesson(lesson);

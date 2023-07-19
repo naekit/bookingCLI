@@ -11,6 +11,9 @@ public class BookingService {
     public BookingService(){
         this.bookingDao = new BookingDao();
     }
+    public BookingService(LessonService lessonService){
+        this.bookingDao = new BookingDao(lessonService);
+    }
 
     public void addBooking(Booking booking){
         bookingDao.addBooking(booking);
