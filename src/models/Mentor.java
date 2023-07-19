@@ -5,6 +5,10 @@ import java.util.Objects;
 public class Mentor {
     private String name;
 
+    public Mentor(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }

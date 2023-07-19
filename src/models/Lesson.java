@@ -7,6 +7,12 @@ public class Lesson {
     private String subject;
     private Mentor mentor;
 
+    public Lesson(String title, String subject, Mentor mentor) {
+        this.title = title;
+        this.subject = subject;
+        this.mentor = mentor;
+    }
+
     public String getTitle() {
         return title;
     }

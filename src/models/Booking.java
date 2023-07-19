@@ -6,6 +6,11 @@ public class Booking {
     private Lesson lesson;
     private String studentName;
 
+    public Booking(Lesson lesson, String studentName) {
+        this.lesson = lesson;
+        this.studentName = studentName;
+    }
+
     public Lesson getLesson() {
         return lesson;
     }
